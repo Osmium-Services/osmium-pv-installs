@@ -1,0 +1,21 @@
+<?php
+
+use Osmium\Modules\Admin\Core\ListView;
+
+$listContext = [
+    'adminUrl' => $adminUrl,
+    'isAdmin' => $admin['isAdmin'],
+];
+?>
+<h4 class="py-3 mb-4">
+    PV Installs
+</h4>
+
+<?php if (!$admin['isReady']): ?>
+    <div class="alert alert-warning">This site has no PV installation requests table, so there is nothing to list.</div>
+<?php else: ?>
+    <?= ListView::render($admin['lists']['leads'], $admin['pvInstalls'], $listContext) ?>
+    <?= ListView::render($admin['lists']['deleted'], $admin['deletedPvInstalls'], $listContext) ?>
+
+    <script src="/assets/admin/js/list-view.js<?= $adminAssetVersion('/assets/admin/js/list-view.js') ?>"></script>
+<?php endif; ?>

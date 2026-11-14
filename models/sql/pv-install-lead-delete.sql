@@ -1,0 +1,2 @@
+DELETE FROM {TABLE}
+WHERE id = :id AND deleted_at IS NOT NULL
