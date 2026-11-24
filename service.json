@@ -1,7 +1,7 @@
 {
     "id": "osmium-pv-installs",
     "name": "Osmium PV Installs",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "Lists the solar PV installation requests a site's enquiry form has saved, under a PV Installs item at the top of the admin sidebar",
     "category": "content",
     "author": {
